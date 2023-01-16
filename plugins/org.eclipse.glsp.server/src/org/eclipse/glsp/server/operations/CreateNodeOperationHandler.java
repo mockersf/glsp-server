@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2022 EclipseSource and others.
+ * Copyright (c) 2022-2023 EclipseSource and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -21,9 +21,7 @@ import org.eclipse.glsp.graph.GModelElement;
 import org.eclipse.glsp.graph.GPoint;
 import org.eclipse.glsp.server.utils.LayoutUtil;
 
-public interface CreateNodeOperationHandler extends CreateOperationHandler {
-   @Override
-   Class<? extends CreateNodeOperation> getHandledOperationType();
+public interface CreateNodeOperationHandler<T extends CreateNodeOperation> extends CreateOperationHandler<T> {
 
    /**
     * Return the absolute location where the element should be created.

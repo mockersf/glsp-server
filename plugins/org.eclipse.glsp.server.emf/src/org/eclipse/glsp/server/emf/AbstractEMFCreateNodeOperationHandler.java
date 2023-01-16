@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2022 EclipseSource and others.
+ * Copyright (c) 2022-2023 EclipseSource and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -23,9 +23,13 @@ import org.eclipse.glsp.server.operations.CreateNodeOperationHandler;
 /**
  * A special {@link EMFOperationHandler} that is responsible for the handling of {@link CreateNodeOperation}s.
  * It provides an EMF command to create the specific node.
+ *
+ * @deprecated Use {@link EMFCreateNodeOperationHandler}
  */
+@Deprecated
 public abstract class AbstractEMFCreateNodeOperationHandler
-   extends AbstractEMFCreateOperationHandler<CreateNodeOperation> implements CreateNodeOperationHandler {
+   extends AbstractEMFCreateOperationHandler<CreateNodeOperation>
+   implements CreateNodeOperationHandler<CreateNodeOperation> {
 
    public AbstractEMFCreateNodeOperationHandler(final String... elementTypeIds) {
       super(elementTypeIds);

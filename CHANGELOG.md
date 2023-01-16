@@ -5,6 +5,7 @@
 ### Changes
 
 - [graph] Updated the Graph model and add Layoutable interface [#175](https://github.com/eclipse-glsp/glsp-server/pull/175) - Contributed on behalf of STMicroelectronics
+- [operation] Rework `OperationHandler` to provide an optional command instead of direct execution to allow more execution control [#187](https://github.com/eclipse-glsp/glsp-server/pull/187)
 
 ### Breaking Changes
 - [websocket] Update to Jetty Websocket 10 [#185](https://github.com/eclipse-glsp/glsp-server/pull/185) [#186](https://github.com/eclipse-glsp/glsp-server/pull/186) - Contributed on behalf of STMicroelectronics

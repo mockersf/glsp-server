@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2022-2023 EclipseSource and others.
+ * Copyright (c) 2023 EclipseSource and others.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -19,25 +19,21 @@ import java.util.List;
 
 import org.eclipse.glsp.server.operations.CreateEdgeOperation;
 import org.eclipse.glsp.server.operations.CreateEdgeOperationHandler;
+import org.eclipse.glsp.server.operations.CreateNodeOperation;
 
 /**
- * A special {@link EMFOperationHandler} that is responsible for the handling of {@link CreateEdgeOperation}s.
- * It provides an EMF command to create the specific edge.
- *
- * @deprecated Use {@link EMFCreateOperationHandler}
+ * A special {@link EMFOperationHandler} that is responsible for the handling of {@link CreateNodeOperation}s.
+ * It provides an EMF command to create the specific node.
  */
-@Deprecated
-public abstract class AbstractEMFCreateEdgeOperationHandler
-   extends AbstractEMFCreateOperationHandler<CreateEdgeOperation>
+public abstract class EMFCreateEdgeOperationHandler
+   extends EMFCreateOperationHandler<CreateEdgeOperation>
    implements CreateEdgeOperationHandler<CreateEdgeOperation> {
 
-   protected List<String> handledElementTypeIds;
-
-   public AbstractEMFCreateEdgeOperationHandler(final String... elementTypeIds) {
+   public EMFCreateEdgeOperationHandler(final String... elementTypeIds) {
       super(elementTypeIds);
    }
 
-   public AbstractEMFCreateEdgeOperationHandler(final List<String> handledElementTypeIds) {
+   public EMFCreateEdgeOperationHandler(final List<String> handledElementTypeIds) {
       super(handledElementTypeIds);
    }
 
